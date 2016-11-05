@@ -28,11 +28,14 @@ module.exports = {
 		var uniq = require('uniqid');
 		var allowed = ['jpg', 'jpeg', 'png'];
 
-		var fd = req.file.buffer;
-		var chunk = fd.slice(0, 262);
-		var type = fileType(chunk);
+		if (req.file !== 'undefined')
+		{
+			var fd = req.file.buffer;
+			var chunk = fd.slice(0, 262);
+			var type = fileType(chunk);
+		}
 
-		if (type && allowed.includes(type.ext))
+		if (typeof(type) !== 'undefined' && type && allowed.includes(type.ext))
 		{
 			var path = process.argv[1].split('/');
 			path.pop();
