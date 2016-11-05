@@ -29,7 +29,7 @@ module.exports = {
 					};
 					var mailOptions = {
 						from: `"resp Matcha 👥"
-							<thibault.francois@hotmail.com>`,
+							<matcha.matcha@laposte.net>`,
 						to: user.mail,
 						subject: 'Reset password',
 						html: 'Hi ' + req.body.login
@@ -38,7 +38,10 @@ module.exports = {
 							+ '  go to /reset/'
 							+ tmp_passwd
 					};
-					transporter.sendMail(mailOptions);
+					transporter.sendMail(mailOptions, function(err, info){
+						if (err)
+							console.log("error" + err);
+					});
 					return req.db.none(query_set_tmp_passwd, params);
 				})
 

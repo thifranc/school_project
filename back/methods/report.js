@@ -4,7 +4,7 @@ module.exports = {
 	{
 		var transporter = require('../config/mail.js').create();
 		var mailOptions = {
-			from: '"Automatic Send " <thibault.francois@hotmail.com>',
+			from: '"Automatic Send " <matcha.matcha@laposte.net>',
 			to: 'thifranc@student.42.fr',
 			subject: 'User report',
 			html: 'Hi your user : '
