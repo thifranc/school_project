@@ -28,7 +28,7 @@ module.exports = {
 							+ req.body.src;
 				fs.unlink(filename, function(err){
 					if (err)
-						console.log(err);
+						console.log('Nice try');
 					else
 						console.log('file removed from server');
 				});

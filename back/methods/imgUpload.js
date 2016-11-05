@@ -28,7 +28,7 @@ module.exports = {
 		var uniq = require('uniqid');
 		var allowed = ['jpg', 'jpeg', 'png'];
 
-		if (req.file !== 'undefined')
+		if (typeof(req.file) !== 'undefined')
 		{
 			var fd = req.file.buffer;
 			var chunk = fd.slice(0, 262);
