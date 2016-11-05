@@ -1,0 +1,19 @@
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"lille", "passwd":"moiMOI123", "mail":"ok@gail.com", "age":23, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":3.057256000000052, "latitude":50.62925}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"capbreton", "passwd":"moiMOI123", "mail":"no@gail.com", "age":23, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":-1.4209389999999757, "latitude":43.637844}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"rennes", "passwd":"moiMOI123", "mail":"non@gail.com", "age":23, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":-1.6777925999999752, "latitude":48.117266}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"nancy", "passwd":"moiMOI123", "mail":"look@gmail.com", "age":23, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":6.184416999999939, "latitude":48.692054}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"paris", "passwd":"moiMOI123", "mail":"ffon@gail.com", "age":23, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"young", "passwd":"moiMOI123", "mail":"fron@gail.com", "age":18, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"old", "passwd":"moiMOI123", "mail":"feon@gail.com", "age":88, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"woman", "passwd":"moiMOI123", "mail":"rfon@gail.com", "age":23, "sex":"women", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"woman_gay", "passwd":"moiMOI123", "mail":"ofon@gail.com", "age":23, "sex":"women", "looking":"women", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"woman_ht", "passwd":"moiMOI123", "mail":"pfon@gail.com", "age":23, "sex":"women", "looking":"men", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"man_ht", "passwd":"moiMOI123", "mail":"cfon@gail.com", "age":23, "sex":"men", "looking":"women", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"man_gay", "passwd":"moiMOI123", "mail":"vfon@gail.com", "age":23, "sex":"men", "looking":"men", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"paris2", "passwd":"moiMOI123", "mail":"bfon@gail.com", "age":23, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"paris3", "passwd":"moiMOI123", "mail":"hfon@gail.com", "age":23, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"paris4", "passwd":"moiMOI123", "mail":"gfon@gail.com", "age":23, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create
+curl -i -H "Content-Type: application/json" -X POST -d '{"login":"paris5", "passwd":"moiMOI123", "mail":"5fon@gail.com", "age":23, "sex":"men", "nom":"moi", "prenom":"moi", "longitude":2.352222, "latitude":48.856614}' localhost:1337/create

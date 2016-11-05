@@ -1,0 +1,51 @@
+template#profile
+  h1#login.ui.centered.header
+  .ui.grid
+    .ui.six.wide.column
+      .ui.small.image
+        img(src="http://localhost:1337/img/user.jpg")#img_main
+        .ui.text.container
+          p 
+        .ui.text.container
+          p
+        .ui.text.container
+          p
+        .ui.text.container
+          p
+        .ui.text.container
+          p
+        .ui.text.container
+          p
+        .ui.text.container
+          p#online
+      .ui.row
+        #liked_you.ui.green.button
+    .ui.ten.wide.column
+      #img.ui.grid
+      .ui.three.column.grid
+        .ui.row
+          .left.floated.column
+            #liked.ui.red.button
+          #chatted.centered.column
+          .right.floated.column
+            #blocked.ui.blue.button
+        p#bio 
+      .ui.grid
+        .ui.centered.row
+          h1.ui.header Followers
+        .ui.eight.wide.column
+          .ui.centered.row
+            .ui.header Likers
+          #likers.ui.text.container
+        .ui.eight.wide.column
+          .ui.centered.row
+            .ui.header Viewers
+          #viewers.ui.text.container
+      .ui.one.column.grid
+        .centered.column
+          #report.ui.black.button
+            i.frown.icon
+            |  Report
+      .ui.one.column.grid
+        .centered.column
+          #map.ui.image

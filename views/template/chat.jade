@@ -1,0 +1,25 @@
+template#chat
+  h1.ui.centered.header Chat 
+  .ui.grid
+    .ui.four.wide.column
+      .ui.small.image
+        img#imgMain(src="../img/user.jpg")
+      .ui.segments
+        .ui.segment
+          p#firstname
+        .ui.segment
+          p#name
+        .ui.segment
+          p#age
+        .ui.segment
+          p#sex
+        .ui.segment
+          p#looking
+    .ui.ten.wide.column
+      .ui.comments#msgs
+      form.ui.reply.form
+        .ten.wide.field
+          textarea#text(rows="3")
+        .ui.primary.submit.labeled.icon.button#send
+          i.icon.edit
+          |  Chat

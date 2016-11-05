@@ -1,0 +1,84 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    title Matcha
+    include link.jade
+    script(src='../semantic/regex.js')
+    script(src='../semantic/jquery.js')
+    script(src='../semantic/jquery.notif.js')
+    script(src='../semantic/jquery.notif.config.js')
+    script(src='../semantic/dist/semantic.js')
+    style.
+      body {
+      background-color: #DADADA;
+      }
+      .ui.menu .item img.logo {
+      margin-right: 1.5em;
+      }
+      .main.container {
+      margin-top: 7em;
+      }
+      .wireframe {
+      margin-top: 2em;
+      }
+      .ui.footer.segment {
+      margin: 5em 0em 0em;
+      padding: 5em 0em;
+      }
+  body
+    .ui.fluid.three.item.inverted.teal.massive.menu
+      .ui.container
+        a.header.item(href='/')
+          | Matcha
+        .ui.right.simple.dropdown.item
+          #account
+          i.dropdown.icon
+          .menu
+            a.item(href="/#self") Profile
+            a.item(href="/logout") Logout
+    include template/profile.jade
+    include template/self.jade
+    include template/chat.jade
+    include template/search.jade
+    #main.ui.main.text.container
+    .ui.inverted.vertical.footer.teal.segment
+      .ui.center.aligned.container
+        .ui.stackable.inverted.divided.grid
+          .ui.left.icon
+            i.book.icon
+            | this site is prowdly powered by Thifranc
+  script(src="/socket.io/socket.io.js")
+  script.
+    var socket = io.connect('http://localhost:1337');
+    socket.on('close_me', function(){
+      console.log('close called');
+      var hash = window.location.hash;
+      if (hash && hash.search('chat') != -1)
+      {
+        window.location = "http://localhost:1337/";
+        alert('You are redirect as you\'ve been blocked by this user');
+      }
+      })
+  script $('#notifs').dropdown();
+  script(src='../routeur/routeur.js')
+  script(src='../AJAX/load/header.js')
+  script(src='../AJAX/listen/header.js')
+  script.
+    getAllNotifs();
+    storeUser();
+    listenNotif(socket);
+
+  script(src='../AJAX/load/profile.js')
+  script(src='../AJAX/listen/profile.js')
+
+  script(src='../AJAX/load/self.js')
+  script(src='../AJAX/listen/self.js')
+
+  script(src='../AJAX/load/chat.js')
+  script(src='../AJAX/listen/chat.js')
+
+  script(src='../AJAX/load/search.js')
+  script(src='../AJAX/listen/search.js')

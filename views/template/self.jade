@@ -1,0 +1,82 @@
+template#self
+  h1#login.ui.centered.header
+  .ui.grid
+    .ui.six.wide.column
+      .ui.small.circular.image
+        img#img_main(src='img/user.jpg')
+      input#mainUp(type="file", name='photo')
+      .ui.text.container
+        p 
+        input#firstname(type='text')
+      .ui.text.container
+        p
+        input#name(type='text')
+      .ui.text.container
+        p
+        input#age(type='number', min=0, max=99)
+      .ui.text.container
+        p
+        input#mail(type='text')
+      .ui.text.container
+        p
+        select#sex
+          option(value="women") Female
+          option(value="men") Male
+      .ui.text.container
+        p
+        select#looking
+          option(value="women") Female
+          option(value="men") Male
+          option(value="both") Both
+      .ui.text.container
+        p
+      .ui.container
+        button#saveData Update Profile
+        button#posUp Update Position
+      .ui.row
+    .ui.ten.wide.column
+      .ui.grid
+        input#imgUp(type="file", name='photo')
+      #imgClassic.ui.equal.width.grid
+        .ui.four.wide.column
+          .ui.fluid.ciruclar.image
+            img.imgMin(src='img/user.jpg')
+        .ui.four.wide.column
+          .ui.fluid.ciruclar.image
+            img.imgMin(src='img/user.jpg')
+        .ui.four.wide.column
+          .ui.fluid.ciruclar.image
+            img.imgMin(src='img/user.jpg')
+        .ui.four.wide.column
+          .ui.fluid.ciruclar.image
+            img.imgMin(src='img/user.jpg')
+      .ui.grid
+        | Your Tags :  
+        #tags.ui.equal.width.grid
+      .ui.grid
+        | All tags
+      .ui.grid
+        .ui.twelve.wide.column
+          select#multi-select.ui.selection.fluid.dropdown(name="tags", multiple="")
+            option(value="") tags
+        .ui.four.wide.column
+          button.ui.button#subTags Subscribe
+      .ui.grid
+        .ui.action.input
+          input#newTag(type="text", placeholder="Create a tag")
+          button#creaTag.ui.button Create
+      .ui.three.column.grid
+        p
+        textarea#bio(type='text', rows=3)
+      .ui.grid
+        .ui.centered.row
+          h1.ui.header Followers
+        .ui.eight.wide.column
+          .ui.centered.row
+            .ui.header Likers
+          #likers.ui.text.container
+        .ui.eight.wide.column
+          .ui.centered.row
+            .ui.header Viewers
+          #viewers.ui.text.container
+  script $('#multi-select').dropdown();

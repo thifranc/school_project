@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    title Subscribe
+    include link.jade
+    script(src='../semantic/jquery.js')
+    script(src='../routeur/create.js')
+    script(src='../semantic/regex.js')
+    style.
+      body {
+        background-color: #DADADA;
+      }
+      body > .grid {
+        height: 100%;
+      }
+      .image {
+        margin-top: -100px;
+      }
+      .column {
+        max-width: 450px;
+      }
+  body
+    .ui.middle.aligned.center.aligned.grid
+      .column
+        h2.ui.teal.image.header
+          .content
+            | Subscribe for free
+        form.ui.large.form
+          .ui.stacked.segment
+            .field
+              .ui.left.icon.input
+                i.user.icon
+                input#login(type='text', placeholder='Login')
+            .field
+              .ui.left.icon.input
+                i.lock.icon
+                input#passwd(type='password', placeholder='Password')
+            .field
+              .ui.left.icon.input
+                i.user.icon
+                input#firstname(type='text', placeholder='Firstname')
+            .field
+              .ui.left.icon.input
+                i.user.icon
+                input#name(type='text', placeholder='Name')
+            .field
+              .ui.left.icon.input
+                i.mail.icon
+                input#mail(type='text', placeholder='Mail')
+            .field
+              .ui.left.icon.input
+                i.birthday.icon
+                input#age(type='number', min=0, max=99, placeholder='Age')
+            .field
+              label.ui.left(for="sex") Choose your gender
+              select#sex(style="height:2.8em")
+                option(value="women") Female
+                option(value="men") Male
+            .field
+              label.ui.left(for="looking") You want to meet
+              select#looking(style="height:2.8em")
+                option(value="both") Both
+                option(value="men") Men
+                option(value="women") Women
+            .field
+                textarea#bio(rows='3', placeholder='Tell us about yourself')
+            button(type="submit").ui.fluid.large.teal.submit.button Subscribe
+          .ui.error.message
+        .ui.message
+          a(href='/') Back to home

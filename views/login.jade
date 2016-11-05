@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    title Login
+    include link.jade
+    script(src='../semantic/jquery.js')
+    script(src='../routeur/login.js')
+    script(src='../semantic/regex.js')
+    style.
+      body {
+        background-color: #DADADA;
+      }
+      body > .grid {
+        height: 100%;
+      }
+      .image {
+        margin-top: -100px;
+      }
+      .column {
+        max-width: 450px;
+      }
+  body
+    .ui.middle.aligned.center.aligned.grid.stackable
+      .eight.wide.column
+        h2.ui.teal.image.header
+          .content
+            | Log-in to your account
+        form.ui.large.form
+          .ui.stacked.segment
+            .field
+              .ui.left.icon.input
+                i.user.icon
+                input#login(type='text', name='login', placeholder='Login')
+            .field
+              .ui.left.icon.input
+                i.lock.icon
+                input#passwd(type='password', name='passwd', placeholder='Password')
+            button#log(type="submit").ui.fluid.large.teal.submit.button Login
+          .ui.error.message
+        .ui.message
+          | New to us? 
+          a(href='/create') Sign Up
+      .eight.wide.column
+        h2.ui.teal.image.header
+          .content
+            | Forgot your password ?
+        form.ui.large.form
+          .ui.stacked.segment
+            .field
+              .ui.left.icon.input
+                i.user.icon
+                input#forgot(type='text', name='login', placeholder='Login')
+            button#reset(type="submit").ui.fluid.large.teal.submit.button Reset password
+          .ui.error.message

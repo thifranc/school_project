@@ -1,0 +1,37 @@
+template#search
+  h1.ui.centered.header Find love 
+  .ui.equal.width.form
+    .fields
+      .two.wide.field
+        label Age min
+        input#ageMin(type="number", min=0, max=99, value=0)
+      .two.wide.field
+        label Age max
+        input#ageMax(type="number", min=0, max=99, value=99)
+      .two.wide.field
+        label Distant max (km)
+        input#gapMax(type="number", min=0, max=99000, value=99000)
+      .two.wide.field
+        label Pop min
+        input#popMin(type="number", min=0, max=10000, value=0)
+      .two.wide.field
+        label Pop max
+        input#popMax(type="number", min=0, max=10000, value=10000)
+    .ui.grid
+      .ui.fourteen.wide.column
+        select#multi-select.ui.selection.fluid.dropdown(name="tags", multiple="")
+          option(value="") tags
+      .ui.two.wide.column
+        button.button#searching search
+  .ui.grid
+    p Sort By
+    button.ui.green.mini.button#sortAgeUp Age Up
+    button.ui.green.mini.button#sortAgeDown Age Down
+    button.ui.green.mini.button#sortTagsUp Tags Up
+    button.ui.green.mini.button#sortTagsDown Tags Down
+    button.ui.green.mini.button#sortGapUp Gap Up
+    button.ui.green.mini.button#sortGapDown Gap Down
+    button.ui.green.mini.button#sortPopUp Pop Up
+    button.ui.green.mini.button#sortPopDown Pop Down
+  .ui.grid#users
+    script $('#multi-select').dropdown();

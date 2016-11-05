@@ -1,0 +1,35 @@
+template#productrow
+  tr
+    td.record
+    td
+    td
+    td
+table#producttable
+  thead
+    tr
+      td Code_UPC
+      td Nom_du_produit
+      td Quantité
+      td Allée
+  tbody
+script.
+  var lol = document.createElement('template');
+  console.log(lol);
+    var tbl = document.querySelector("#producttable tbody"),
+        prd = document.getElementById("productrow");
+    // Création d’une nouvelle ligne
+    var td = prd.content.querySelectorAll("td");
+    console.log(prd.content);
+    td[0].textContent = "0384928527";
+    td[1].textContent = "Acme Green Beans";
+    td[2].textContent = "42";
+    td[3].textContent = "11B";
+    // Clone la nouvelle ligne et l’insère dans le tableau
+    tbl.appendChild(prd.content.cloneNode(true));
+    // Création d’une nouvelle ligne
+    td[0].textContent = "0384928528";
+    td[1].textContent = "Acme Kidney Beans";
+    td[2].textContent = "31";
+    td[3].textContent = "11B";
+    // Clone la nouvelle ligne et l’insère dans le tableau
+    tbl.appendChild(prd.content.cloneNode(true));
