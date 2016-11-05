@@ -11,7 +11,7 @@ module.exports = {
 				&& regex.is_age(body.age)
 				&& regex.is_alphanum(body.nom)
 				&& regex.is_alphanum(body.prenom)
-				&& regex.is_alphanum(body.bio)
+				&& (regex.is_alphanum(body.bio) || !body.bio.length)
 				&& regex.is_mail(body.mail)
 		)
 			return (true);
